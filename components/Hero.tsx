@@ -33,8 +33,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center pt-16">
-      <div className="max-w-6xl mx-auto px-6 py-24 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="min-h-screen flex items-center pt-28 lg:pt-24">
+      <div className="max-w-6xl mx-auto px-6 py-12 lg:py-24 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left column */}
         <div className="flex flex-col gap-8">
           {/* Badge */}
@@ -97,63 +97,68 @@ export default function Hero() {
           </div>
 
           {/* Email form */}
-          <form id="hero-form" onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-[480px]">
-            <input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com"
-              disabled={status === "loading" || status === "success"}
-              className="flex-1 px-4 outline-none rounded-xl text-sm"
-              style={{
-                height: "52px",
-                background: "rgba(245,245,240,0.06)",
-                border: "1px solid rgba(245,245,240,0.15)",
-                color: "#F5F5F0",
-              }}
-            />
-            <button
-              type="submit"
-              disabled={status === "loading" || status === "success"}
-              className="px-6 rounded-xl text-sm whitespace-nowrap transition-opacity hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
-              style={{
-                height: "52px",
-                background: "#1ED8B0",
-                color: "#0A2535",
-                fontWeight: 600,
-                minWidth: "180px",
-              }}
-            >
-              {status === "loading" ? (
-                <>
-                  <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
-                  </svg>
-                  Joining...
-                </>
-              ) : (
-                "Get early access →"
-              )}
-            </button>
-          </form>
+          <div
+            id="waitlist"
+            style={{ scrollMarginTop: "80px" }}
+          >
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-[480px]">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="your@email.com"
+                disabled={status === "loading" || status === "success"}
+                className="flex-1 px-4 outline-none rounded-xl text-sm"
+                style={{
+                  height: "52px",
+                  background: "rgba(245,245,240,0.06)",
+                  border: "1px solid rgba(245,245,240,0.15)",
+                  color: "#F5F5F0",
+                }}
+              />
+              <button
+                type="submit"
+                disabled={status === "loading" || status === "success"}
+                className="px-6 rounded-xl text-sm whitespace-nowrap transition-opacity hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
+                style={{
+                  height: "52px",
+                  background: "#1ED8B0",
+                  color: "#0A2535",
+                  fontWeight: 600,
+                  minWidth: "180px",
+                }}
+              >
+                {status === "loading" ? (
+                  <>
+                    <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                    </svg>
+                    Joining...
+                  </>
+                ) : (
+                  "Get early access →"
+                )}
+              </button>
+            </form>
 
-          {/* Status messages */}
-          {status === "success" && (
-            <p className="text-sm" style={{ color: "#1ED8B0" }}>
-              You&apos;re on the list! We&apos;ll be in touch.
-            </p>
-          )}
-          {status === "error" && (
-            <p className="text-sm" style={{ color: "#ff6b6b" }}>
-              {errorMsg}
-            </p>
-          )}
+            {/* Status messages */}
+            {status === "success" && (
+              <p className="text-sm mt-3" style={{ color: "#1ED8B0" }}>
+                You&apos;re on the list! We&apos;ll be in touch.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-sm mt-3" style={{ color: "#ff6b6b" }}>
+                {errorMsg}
+              </p>
+            )}
+          </div>
 
           {/* Meta text */}
           <p className="text-xs" style={{ color: "rgba(245,245,240,0.45)" }}>
-            ⚡ 500+ people already on the waitlist · Free forever tier included
+            Free to join · Launching in Norway 2026
           </p>
         </div>
 

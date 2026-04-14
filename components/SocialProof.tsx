@@ -1,16 +1,8 @@
 "use client";
 
-const avatars = [
-  { initials: "MK", bg: "#2d6a4f" },
-  { initials: "AS", bg: "#1d4e89" },
-  { initials: "TH", bg: "#6a3d9a" },
-  { initials: "LB", bg: "#b5451b" },
-  { initials: "+496", bg: "rgba(30,216,176,0.2)", border: "1px solid rgba(30,216,176,0.4)", color: "#1ED8B0" },
-];
-
 export default function SocialProof() {
-  const scrollToForm = () => {
-    document.getElementById("hero-form")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToWaitlist = () => {
+    document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -34,41 +26,17 @@ export default function SocialProof() {
                 lineHeight: 1.2,
               }}
             >
-              500+ people waiting to take control of their money.
+              Be among the first to take control of your money.
             </h2>
             <p style={{ fontWeight: 300, fontSize: "0.9rem", color: "rgba(245,245,240,0.55)" }}>
-              Launching in Norway first · Sweden &amp; Denmark coming soon
+              Launching in Norway · Sweden &amp; Denmark coming soon
             </p>
           </div>
 
           {/* Right */}
-          <div className="flex flex-col gap-5 items-start md:items-end">
-            {/* Avatar row */}
-            <div className="flex items-center">
-              {avatars.map((a, i) => (
-                <div
-                  key={a.initials}
-                  className="rounded-full flex items-center justify-center font-semibold"
-                  style={{
-                    width: "36px",
-                    height: "36px",
-                    background: a.bg,
-                    border: a.border ?? "2px solid #0A2535",
-                    color: a.color ?? "#F5F5F0",
-                    marginLeft: i === 0 ? "0" : "-8px",
-                    fontSize: a.initials.startsWith("+") ? "0.6rem" : "0.7rem",
-                    zIndex: avatars.length - i,
-                    position: "relative",
-                  }}
-                >
-                  {a.initials}
-                </div>
-              ))}
-            </div>
-
-            {/* CTA button */}
+          <div className="flex items-center md:items-end">
             <button
-              onClick={scrollToForm}
+              onClick={scrollToWaitlist}
               className="rounded-full px-7 py-3 text-sm transition-opacity hover:opacity-90"
               style={{
                 background: "#1ED8B0",

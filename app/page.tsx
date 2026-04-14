@@ -11,8 +11,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <HowItWorks />
         <Features />
+        <HowItWorks />
         <SocialProof />
       </main>
       <Footer />

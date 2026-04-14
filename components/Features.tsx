@@ -1,21 +1,27 @@
 const features = [
   {
     emoji: "🔗",
-    title: "Instant bank sync",
+    title: "Links to your bank in 60 seconds",
     description:
-      "Connect your Norwegian bank in 60 seconds via PSD2 open banking. Secure, read-only. We never see your credentials.",
+      "Read-only access via PSD2 open banking. FINIO can see your transactions — it can never move money. Works with all major Norwegian banks.",
   },
   {
     emoji: "🤖",
-    title: "AI Advisor",
+    title: "Ask anything, get real answers",
     description:
-      "Ask anything about your finances. Get honest, personalized advice based on your actual spending — not generic tips.",
+      "Ask 'where did my money go this month?' or 'can I afford a holiday?' FINIO answers based on your actual numbers — not generic advice.",
   },
   {
     emoji: "🎯",
-    title: "Active savings discovery",
+    title: "Finds savings you didn't know existed",
     description:
-      "FINIO scans your transactions and proactively surfaces savings: subscriptions to cancel, better loan rates, smarter switching.",
+      "Unused subscriptions. A mortgage rate 0.4% above market. Insurance you're overpaying. FINIO spots them and tells you exactly what to do.",
+  },
+  {
+    emoji: "🔒",
+    title: "Your data stays yours",
+    description:
+      "Read-only bank access, data encrypted and hosted in the EU. No ads. No selling your data. Ever. FINIO makes money when it saves you money — not before.",
   },
 ];
 
@@ -37,8 +43,8 @@ export default function Features() {
           <span style={{ color: "#1ED8B0" }}>but doesn&apos;t.</span>
         </h2>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* 2×2 cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((f) => (
             <div
               key={f.title}
