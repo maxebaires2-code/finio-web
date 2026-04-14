@@ -33,14 +33,15 @@ export default function Features() {
         <h2
           className="text-center mb-16"
           style={{
-            fontWeight: 700,
+            fontFamily: "var(--font-jakarta)",
+              fontWeight: 700,
             fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
             letterSpacing: "-0.02em",
             color: "#F5F5F0",
           }}
         >
           Everything your bank app should do —{" "}
-          <span style={{ color: "#1ED8B0" }}>but doesn&apos;t.</span>
+          <span style={{ color: "#10C4A0" }}>but doesn&apos;t.</span>
         </h2>
 
         {/* 2×2 cards grid */}
@@ -57,20 +58,22 @@ export default function Features() {
               {/* Emoji icon */}
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center text-xl"
-                style={{ background: "rgba(30,216,176,0.12)" }}
+                style={{ background: "rgba(16,196,160,0.12)" }}
               >
                 {f.emoji}
               </div>
 
               {/* Title */}
-              <h3 style={{ fontWeight: 700, fontSize: "1.1rem", color: "#F5F5F0" }}>
+              <h3 style={{ fontFamily: "var(--font-jakarta)",
+              fontWeight: 700, fontSize: "1.1rem", color: "#F5F5F0" }}>
                 {f.title}
               </h3>
 
               {/* Description */}
               <p
                 style={{
-                  fontWeight: 300,
+                  fontFamily: "var(--font-dm-sans)",
+                fontWeight: 300,
                   fontSize: "0.9rem",
                   lineHeight: 1.7,
                   color: "rgba(245,245,240,0.6)",

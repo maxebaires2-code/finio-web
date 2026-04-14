@@ -44,7 +44,7 @@ export default function WhatsInside() {
         {/* Section tag */}
         <p
           className="text-center mb-4 tracking-widest text-xs uppercase"
-          style={{ color: "#1ED8B0", fontWeight: 500 }}
+          style={{ color: "#10C4A0", fontWeight: 500 }}
         >
           What&apos;s inside
         </p>
@@ -53,14 +53,15 @@ export default function WhatsInside() {
         <h2
           className="text-center mb-16"
           style={{
-            fontWeight: 700,
+            fontFamily: "var(--font-jakarta)",
+              fontWeight: 700,
             fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
             letterSpacing: "-0.02em",
             color: "#F5F5F0",
           }}
         >
           Everything you need,{" "}
-          <span style={{ color: "#1ED8B0" }}>nothing you don&apos;t.</span>
+          <span style={{ color: "#10C4A0" }}>nothing you don&apos;t.</span>
         </h2>
 
         {/* 2-column grid */}
@@ -89,7 +90,7 @@ export default function WhatsInside() {
               {/* Emoji */}
               <div
                 className="shrink-0 w-10 h-10 rounded-lg flex items-center justify-center text-lg mt-0.5"
-                style={{ background: "rgba(30,216,176,0.10)" }}
+                style={{ background: "rgba(16,196,160,0.10)" }}
               >
                 {item.emoji}
               </div>
@@ -101,7 +102,8 @@ export default function WhatsInside() {
                 </h3>
                 <p
                   style={{
-                    fontWeight: 300,
+                    fontFamily: "var(--font-dm-sans)",
+                fontWeight: 300,
                     fontSize: "0.875rem",
                     lineHeight: 1.65,
                     color: "rgba(245,245,240,0.55)",

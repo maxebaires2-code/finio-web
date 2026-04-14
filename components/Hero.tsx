@@ -41,18 +41,19 @@ export default function Hero() {
           <div
             className="inline-flex items-center gap-2 w-fit rounded-full px-4 py-1.5 text-sm"
             style={{
-              background: "rgba(30,216,176,0.10)",
-              border: "1px solid rgba(30,216,176,0.25)",
-              color: "#1ED8B0",
+              background: "rgba(16,196,160,0.10)",
+              border: "1px solid rgba(16,196,160,0.25)",
+              color: "#10C4A0",
             }}
           >
-            <span className="w-2 h-2 rounded-full bg-[#1ED8B0] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#10C4A0] animate-pulse" />
             Now in beta · Norway
           </div>
 
           {/* H1 */}
           <h1
             style={{
+              fontFamily: "var(--font-jakarta)",
               fontWeight: 800,
               fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
               lineHeight: 1.05,
@@ -63,13 +64,14 @@ export default function Hero() {
             Finish every
             <br />
             month{" "}
-            <span style={{ color: "#1ED8B0" }}>ahead.</span>
+            <span style={{ color: "#10C4A0" }}>ahead.</span>
           </h1>
 
           {/* Subheading */}
           <p
             style={{
-              fontWeight: 300,
+              fontFamily: "var(--font-dm-sans)",
+                fontWeight: 300,
               fontSize: "1rem",
               lineHeight: 1.7,
               color: "rgba(245,245,240,0.6)",
@@ -123,7 +125,7 @@ export default function Hero() {
                 className="px-6 rounded-xl text-sm whitespace-nowrap transition-opacity hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
                 style={{
                   height: "52px",
-                  background: "#1ED8B0",
+                  background: "#10C4A0",
                   color: "#0A2535",
                   fontWeight: 600,
                   minWidth: "180px",
@@ -145,7 +147,7 @@ export default function Hero() {
 
             {/* Status messages */}
             {status === "success" && (
-              <p className="text-sm mt-3" style={{ color: "#1ED8B0" }}>
+              <p className="text-sm mt-3" style={{ color: "#10C4A0" }}>
                 You&apos;re on the list! We&apos;ll be in touch.
               </p>
             )}
@@ -172,7 +174,7 @@ export default function Hero() {
               background: "#081e2c",
               borderRadius: "2.5rem",
               border: "1px solid rgba(255,255,255,0.10)",
-              boxShadow: "0 25px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(30,216,176,0.08)",
+              boxShadow: "0 25px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(16,196,160,0.08)",
             }}
           >
             <div className="p-5 flex flex-col gap-3 h-full">
@@ -182,7 +184,7 @@ export default function Hero() {
               </p>
 
               {/* Balance card */}
-              <div className="rounded-xl p-4" style={{ background: "#1ED8B0" }}>
+              <div className="rounded-xl p-4" style={{ background: "#10C4A0" }}>
                 <p className="text-xs font-medium" style={{ color: "#0A2535", opacity: 0.7 }}>
                   Left this month
                 </p>
@@ -198,22 +200,22 @@ export default function Hero() {
               <div
                 className="rounded-xl p-3"
                 style={{
-                  background: "rgba(30,216,176,0.10)",
-                  border: "1px solid rgba(30,216,176,0.20)",
+                  background: "rgba(16,196,160,0.10)",
+                  border: "1px solid rgba(16,196,160,0.20)",
                 }}
               >
                 <p className="text-xs leading-relaxed" style={{ color: "#F5F5F0" }}>
-                  💡 <strong style={{ color: "#1ED8B0" }}>FINIO found kr 890/mo in savings.</strong> You have 4 unused subscriptions and a loan rate 1.2% above market.
+                  💡 <strong style={{ color: "#10C4A0" }}>FINIO found kr 890/mo in savings.</strong> You have 4 unused subscriptions and a loan rate 1.2% above market.
                 </p>
               </div>
 
               {/* Spending categories */}
               <div className="flex flex-col gap-2 mt-1">
                 {[
-                  { label: "Food", pct: 68, color: "#1ED8B0" },
-                  { label: "Transport", pct: 42, color: "#1ED8B0" },
+                  { label: "Food", pct: 68, color: "#10C4A0" },
+                  { label: "Transport", pct: 42, color: "#10C4A0" },
                   { label: "Shopping", pct: 91, color: "#ff6b6b" },
-                  { label: "Subscriptions", pct: 55, color: "#1ED8B0" },
+                  { label: "Subscriptions", pct: 55, color: "#10C4A0" },
                 ].map(({ label, pct, color }) => (
                   <div key={label}>
                     <div className="flex justify-between mb-1">

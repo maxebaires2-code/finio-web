@@ -11,15 +11,16 @@ export default function SocialProof() {
         <div
           className="rounded-3xl p-10 md:p-14 flex flex-col md:flex-row gap-10 items-start md:items-center justify-between"
           style={{
-            border: "1px solid rgba(30,216,176,0.20)",
-            background: "rgba(30,216,176,0.04)",
+            border: "1px solid rgba(16,196,160,0.20)",
+            background: "rgba(16,196,160,0.04)",
           }}
         >
           {/* Left */}
           <div className="flex flex-col gap-3 max-w-md">
             <h2
               style={{
-                fontWeight: 800,
+                fontFamily: "var(--font-jakarta)",
+              fontWeight: 800,
                 fontSize: "clamp(1.5rem, 3vw, 2rem)",
                 letterSpacing: "-0.02em",
                 color: "#F5F5F0",
@@ -28,7 +29,8 @@ export default function SocialProof() {
             >
               Be among the first to take control of your money.
             </h2>
-            <p style={{ fontWeight: 300, fontSize: "0.9rem", color: "rgba(245,245,240,0.55)" }}>
+            <p style={{ fontFamily: "var(--font-dm-sans)",
+                fontWeight: 300, fontSize: "0.9rem", color: "rgba(245,245,240,0.55)" }}>
               Launching in Norway · Sweden &amp; Denmark coming soon
             </p>
           </div>
@@ -39,7 +41,7 @@ export default function SocialProof() {
               onClick={scrollToWaitlist}
               className="rounded-full px-7 py-3 text-sm transition-opacity hover:opacity-90"
               style={{
-                background: "#1ED8B0",
+                background: "#10C4A0",
                 color: "#0A2535",
                 fontWeight: 600,
               }}

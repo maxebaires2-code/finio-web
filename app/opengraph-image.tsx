@@ -39,7 +39,7 @@ export default function OGImage() {
               fontFamily: "Arial, sans-serif",
               fontWeight: 400,
               fontSize: "14px",
-              color: "#1ED8B0",
+              color: "#10C4A0",
               letterSpacing: "6px",
               textTransform: "uppercase",
             }}
@@ -67,7 +67,7 @@ export default function OGImage() {
             }}
           >
             Finish every month{" "}
-            <span style={{ color: "#1ED8B0" }}>ahead.</span>
+            <span style={{ color: "#10C4A0" }}>ahead.</span>
           </span>
         </div>
 

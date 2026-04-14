@@ -30,14 +30,15 @@ export default function HowItWorks() {
         <h2
           className="text-center mb-16"
           style={{
-            fontWeight: 700,
+            fontFamily: "var(--font-jakarta)",
+              fontWeight: 700,
             fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
             letterSpacing: "-0.02em",
             color: "#F5F5F0",
           }}
         >
           Up and running in{" "}
-          <span style={{ color: "#1ED8B0" }}>3 minutes.</span>
+          <span style={{ color: "#10C4A0" }}>3 minutes.</span>
         </h2>
 
         {/* Steps */}
@@ -46,7 +47,7 @@ export default function HowItWorks() {
           <div
             className="hidden md:block absolute top-10 h-px"
             style={{
-              borderTop: "1px dashed rgba(30,216,176,0.25)",
+              borderTop: "1px dashed rgba(16,196,160,0.25)",
               zIndex: 0,
               left: "calc(16.67% + 32px)",
               right: "calc(16.67% + 32px)",
@@ -59,14 +60,14 @@ export default function HowItWorks() {
               <div
                 className="w-20 h-20 rounded-full flex flex-col items-center justify-center"
                 style={{
-                  border: "2px solid rgba(30,216,176,0.5)",
+                  border: "2px solid rgba(16,196,160,0.5)",
                   background: "#0A2535",
                 }}
               >
                 <span
                   style={{
                     fontSize: "0.65rem",
-                    color: "#1ED8B0",
+                    color: "#10C4A0",
                     opacity: 0.7,
                     letterSpacing: "0.1em",
                   }}
@@ -77,14 +78,16 @@ export default function HowItWorks() {
               </div>
 
               {/* Title */}
-              <h3 style={{ fontWeight: 700, fontSize: "1.15rem", color: "#F5F5F0" }}>
+              <h3 style={{ fontFamily: "var(--font-jakarta)",
+              fontWeight: 700, fontSize: "1.15rem", color: "#F5F5F0" }}>
                 {step.title}
               </h3>
 
               {/* Description */}
               <p
                 style={{
-                  fontWeight: 300,
+                  fontFamily: "var(--font-dm-sans)",
+                fontWeight: 300,
                   fontSize: "0.9rem",
                   lineHeight: 1.7,
                   color: "rgba(245,245,240,0.6)",

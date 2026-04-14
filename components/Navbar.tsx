@@ -10,7 +10,7 @@ export default function Navbar() {
       }}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        {/* Logo — icon box + wordmark, no subtitle */}
+        {/* Logo — icon box + wordmark */}
         <div className="flex items-center gap-2.5">
           {/* Icon box */}
           <div
@@ -18,24 +18,25 @@ export default function Navbar() {
             style={{
               width: "30px",
               height: "30px",
-              background: "rgba(30,216,176,0.13)",
+              background: "rgba(16,196,160,0.13)",
             }}
           >
             <svg width="18" height="18" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="240" y="200" width="94" height="624" rx="47" fill="#1ED8B0"/>
-              <rect x="240" y="200" width="440" height="94" rx="47" fill="#1ED8B0"/>
-              <rect x="240" y="465" width="340" height="94" rx="47" fill="#1ED8B0"/>
-              <circle cx="772" cy="512" r="88" fill="#1ED8B0"/>
+              <rect x="240" y="200" width="94" height="624" rx="47" fill="#10C4A0"/>
+              <rect x="240" y="200" width="440" height="94" rx="47" fill="#10C4A0"/>
+              <rect x="240" y="465" width="340" height="94" rx="47" fill="#10C4A0"/>
+              <circle cx="772" cy="512" r="88" fill="#10C4A0"/>
               <circle cx="772" cy="512" r="44" fill="#0A2535"/>
             </svg>
           </div>
           {/* Wordmark */}
           <span
             style={{
+              fontFamily: "var(--font-jakarta)",
               fontWeight: 800,
-              fontSize: "20px",
-              color: "#1ED8B0",
-              letterSpacing: "-0.5px",
+              fontSize: "22px",
+              color: "#10C4A0",
+              letterSpacing: "-1px",
               lineHeight: 1,
             }}
           >
@@ -48,7 +49,7 @@ export default function Navbar() {
           <button
             onClick={() => document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })}
             className="text-sm md:text-base transition-colors bg-transparent border-0 cursor-pointer p-0"
-            style={{ color: "rgba(245,245,240,0.7)" }}
+            style={{ fontFamily: "var(--font-dm-sans)", color: "rgba(245,245,240,0.7)" }}
             onMouseOver={(e) => (e.currentTarget.style.color = "#F5F5F0")}
             onMouseOut={(e) => (e.currentTarget.style.color = "rgba(245,245,240,0.7)")}
           >
@@ -57,7 +58,7 @@ export default function Navbar() {
           <button
             onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
             className="text-sm md:text-base transition-colors bg-transparent border-0 cursor-pointer p-0"
-            style={{ color: "rgba(245,245,240,0.7)" }}
+            style={{ fontFamily: "var(--font-dm-sans)", color: "rgba(245,245,240,0.7)" }}
             onMouseOver={(e) => (e.currentTarget.style.color = "#F5F5F0")}
             onMouseOut={(e) => (e.currentTarget.style.color = "rgba(245,245,240,0.7)")}
           >
