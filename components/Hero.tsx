@@ -76,7 +76,7 @@ export default function Hero() {
               maxWidth: "480px",
             }}
           >
-            FINIO connects to your bank and actively finds savings — not just tracks spending. Your personal AI finance advisor, finally free.
+            FINIO finds the money you&apos;re losing every month and tells you exactly what to do with it. Your personal AI finance advisor — free.
           </p>
 
           {/* Trust pills */}

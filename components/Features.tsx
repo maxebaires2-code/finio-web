@@ -1,27 +1,27 @@
 const features = [
   {
-    emoji: "🔗",
-    title: "Links to your bank in 60 seconds",
+    emoji: "🎯",
+    title: "Finds savings you didn't know existed",
     description:
-      "Read-only access via PSD2 open banking. FINIO can see your transactions — it can never move money. Works with all major Norwegian banks.",
+      "Unused subscriptions, a mortgage rate above market, insurance you're overpaying — FINIO spots them automatically and tells you exactly what to do.",
+  },
+  {
+    emoji: "🏦",
+    title: "All your money, one place",
+    description:
+      "Connect multiple banks and credit cards. Every transaction, every account, automatically categorized and tracked in one clean view.",
   },
   {
     emoji: "🤖",
     title: "Ask anything, get real answers",
     description:
-      "Ask 'where did my money go this month?' or 'can I afford a holiday?' FINIO answers based on your actual numbers — not generic advice.",
-  },
-  {
-    emoji: "🎯",
-    title: "Finds savings you didn't know existed",
-    description:
-      "Unused subscriptions. A mortgage rate 0.4% above market. Insurance you're overpaying. FINIO spots them and tells you exactly what to do.",
+      "Can I afford a holiday? Where did my money go this month? FINIO answers based on your actual numbers — not generic tips.",
   },
   {
     emoji: "🔒",
     title: "Your data stays yours",
     description:
-      "Read-only bank access, data encrypted and hosted in the EU. No ads. No selling your data. Ever. FINIO makes money when it saves you money — not before.",
+      "Read-only bank access. Data encrypted and hosted in the EU. No ads, no selling your data. FINIO makes money when it saves you money — not before.",
   },
 ];
 
