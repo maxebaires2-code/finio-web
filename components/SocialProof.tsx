@@ -27,7 +27,6 @@ export default function SocialProof() {
           <div className="flex flex-col gap-3 max-w-md">
             <h2
               style={{
-                fontFamily: "var(--font-syne)",
                 fontWeight: 800,
                 fontSize: "clamp(1.5rem, 3vw, 2rem)",
                 letterSpacing: "-0.02em",
@@ -37,14 +36,7 @@ export default function SocialProof() {
             >
               500+ people waiting to take control of their money.
             </h2>
-            <p
-              style={{
-                fontFamily: "var(--font-dm-sans)",
-                fontWeight: 300,
-                fontSize: "0.9rem",
-                color: "rgba(245,245,240,0.55)",
-              }}
-            >
+            <p style={{ fontWeight: 300, fontSize: "0.9rem", color: "rgba(245,245,240,0.55)" }}>
               Launching in Norway first · Sweden &amp; Denmark coming soon
             </p>
           </div>
@@ -56,7 +48,7 @@ export default function SocialProof() {
               {avatars.map((a, i) => (
                 <div
                   key={a.initials}
-                  className="rounded-full flex items-center justify-center text-xs font-semibold"
+                  className="rounded-full flex items-center justify-center font-semibold"
                   style={{
                     width: "36px",
                     height: "36px",
@@ -64,7 +56,6 @@ export default function SocialProof() {
                     border: a.border ?? "2px solid #0A2535",
                     color: a.color ?? "#F5F5F0",
                     marginLeft: i === 0 ? "0" : "-8px",
-                    fontFamily: "var(--font-dm-sans)",
                     fontSize: a.initials.startsWith("+") ? "0.6rem" : "0.7rem",
                     zIndex: avatars.length - i,
                     position: "relative",
@@ -78,11 +69,10 @@ export default function SocialProof() {
             {/* CTA button */}
             <button
               onClick={scrollToForm}
-              className="rounded-full px-7 py-3 font-semibold text-sm transition-opacity hover:opacity-90"
+              className="rounded-full px-7 py-3 text-sm transition-opacity hover:opacity-90"
               style={{
                 background: "#1ED8B0",
                 color: "#0A2535",
-                fontFamily: "var(--font-dm-sans)",
                 fontWeight: 600,
               }}
             >

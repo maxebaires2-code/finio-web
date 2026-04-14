@@ -30,8 +30,7 @@ export default function HowItWorks() {
         <h2
           className="text-center mb-16"
           style={{
-            fontFamily: "var(--font-syne)",
-            fontWeight: 800,
+            fontWeight: 700,
             fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
             letterSpacing: "-0.02em",
             color: "#F5F5F0",
@@ -45,7 +44,7 @@ export default function HowItWorks() {
         <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Dashed connector line — desktop only */}
           <div
-            className="hidden md:block absolute top-10 left-1/6 right-1/6 h-px"
+            className="hidden md:block absolute top-10 h-px"
             style={{
               borderTop: "1px dashed rgba(30,216,176,0.25)",
               zIndex: 0,
@@ -68,7 +67,6 @@ export default function HowItWorks() {
                   style={{
                     fontSize: "0.65rem",
                     color: "#1ED8B0",
-                    fontFamily: "var(--font-dm-sans)",
                     opacity: 0.7,
                     letterSpacing: "0.1em",
                   }}
@@ -79,21 +77,13 @@ export default function HowItWorks() {
               </div>
 
               {/* Title */}
-              <h3
-                style={{
-                  fontFamily: "var(--font-syne)",
-                  fontWeight: 700,
-                  fontSize: "1.15rem",
-                  color: "#F5F5F0",
-                }}
-              >
+              <h3 style={{ fontWeight: 700, fontSize: "1.15rem", color: "#F5F5F0" }}>
                 {step.title}
               </h3>
 
               {/* Description */}
               <p
                 style={{
-                  fontFamily: "var(--font-dm-sans)",
                   fontWeight: 300,
                   fontSize: "0.9rem",
                   lineHeight: 1.7,

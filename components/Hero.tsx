@@ -38,11 +38,11 @@ export default function Hero() {
         {/* Left column */}
         <div className="flex flex-col gap-8">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 w-fit rounded-full px-4 py-1.5 text-sm"
+          <div
+            className="inline-flex items-center gap-2 w-fit rounded-full px-4 py-1.5 text-sm"
             style={{
               background: "rgba(30,216,176,0.10)",
               border: "1px solid rgba(30,216,176,0.25)",
-              fontFamily: "var(--font-dm-sans)",
               color: "#1ED8B0",
             }}
           >
@@ -53,7 +53,6 @@ export default function Hero() {
           {/* H1 */}
           <h1
             style={{
-              fontFamily: "var(--font-syne)",
               fontWeight: 800,
               fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
               lineHeight: 1.05,
@@ -70,7 +69,6 @@ export default function Hero() {
           {/* Subheading */}
           <p
             style={{
-              fontFamily: "var(--font-dm-sans)",
               fontWeight: 300,
               fontSize: "1rem",
               lineHeight: 1.7,
@@ -91,7 +89,6 @@ export default function Hero() {
                   background: "rgba(245,245,240,0.06)",
                   border: "1px solid rgba(245,245,240,0.12)",
                   color: "rgba(245,245,240,0.75)",
-                  fontFamily: "var(--font-dm-sans)",
                 }}
               >
                 {pill}
@@ -114,18 +111,16 @@ export default function Hero() {
                 background: "rgba(245,245,240,0.06)",
                 border: "1px solid rgba(245,245,240,0.15)",
                 color: "#F5F5F0",
-                fontFamily: "var(--font-dm-sans)",
               }}
             />
             <button
               type="submit"
               disabled={status === "loading" || status === "success"}
-              className="px-6 rounded-xl font-semibold text-sm whitespace-nowrap transition-opacity hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
+              className="px-6 rounded-xl text-sm whitespace-nowrap transition-opacity hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
               style={{
                 height: "52px",
                 background: "#1ED8B0",
                 color: "#0A2535",
-                fontFamily: "var(--font-dm-sans)",
                 fontWeight: 600,
                 minWidth: "180px",
               }}
@@ -146,21 +141,18 @@ export default function Hero() {
 
           {/* Status messages */}
           {status === "success" && (
-            <p className="text-sm" style={{ color: "#1ED8B0", fontFamily: "var(--font-dm-sans)" }}>
+            <p className="text-sm" style={{ color: "#1ED8B0" }}>
               You&apos;re on the list! We&apos;ll be in touch.
             </p>
           )}
           {status === "error" && (
-            <p className="text-sm" style={{ color: "#ff6b6b", fontFamily: "var(--font-dm-sans)" }}>
+            <p className="text-sm" style={{ color: "#ff6b6b" }}>
               {errorMsg}
             </p>
           )}
 
           {/* Meta text */}
-          <p
-            className="text-xs"
-            style={{ color: "rgba(245,245,240,0.45)", fontFamily: "var(--font-dm-sans)" }}
-          >
+          <p className="text-xs" style={{ color: "rgba(245,245,240,0.45)" }}>
             ⚡ 500+ people already on the waitlist · Free forever tier included
           </p>
         </div>
@@ -180,25 +172,16 @@ export default function Hero() {
           >
             <div className="p-5 flex flex-col gap-3 h-full">
               {/* Greeting */}
-              <p
-                className="text-xs mt-2"
-                style={{ color: "rgba(245,245,240,0.7)", fontFamily: "var(--font-dm-sans)" }}
-              >
+              <p className="text-xs mt-2" style={{ color: "rgba(245,245,240,0.7)" }}>
                 Good morning, Erik 👋
               </p>
 
               {/* Balance card */}
-              <div
-                className="rounded-xl p-4"
-                style={{ background: "#1ED8B0" }}
-              >
+              <div className="rounded-xl p-4" style={{ background: "#1ED8B0" }}>
                 <p className="text-xs font-medium" style={{ color: "#0A2535", opacity: 0.7 }}>
                   Left this month
                 </p>
-                <p
-                  className="text-2xl font-bold mt-0.5"
-                  style={{ color: "#0A2535", fontFamily: "var(--font-syne)" }}
-                >
+                <p className="text-2xl font-bold mt-0.5" style={{ color: "#0A2535" }}>
                   kr 4,280
                 </p>
                 <p className="text-xs mt-0.5" style={{ color: "#0A2535", opacity: 0.6 }}>
@@ -214,7 +197,7 @@ export default function Hero() {
                   border: "1px solid rgba(30,216,176,0.20)",
                 }}
               >
-                <p className="text-xs leading-relaxed" style={{ color: "#F5F5F0", fontFamily: "var(--font-dm-sans)" }}>
+                <p className="text-xs leading-relaxed" style={{ color: "#F5F5F0" }}>
                   💡 <strong style={{ color: "#1ED8B0" }}>FINIO found kr 890/mo in savings.</strong> You have 4 unused subscriptions and a loan rate 1.2% above market.
                 </p>
               </div>
@@ -229,10 +212,10 @@ export default function Hero() {
                 ].map(({ label, pct, color }) => (
                   <div key={label}>
                     <div className="flex justify-between mb-1">
-                      <span className="text-xs" style={{ color: "rgba(245,245,240,0.6)", fontFamily: "var(--font-dm-sans)" }}>
+                      <span className="text-xs" style={{ color: "rgba(245,245,240,0.6)" }}>
                         {label}
                       </span>
-                      <span className="text-xs" style={{ color: "rgba(245,245,240,0.5)", fontFamily: "var(--font-dm-sans)" }}>
+                      <span className="text-xs" style={{ color: "rgba(245,245,240,0.5)" }}>
                         {pct}%
                       </span>
                     </div>

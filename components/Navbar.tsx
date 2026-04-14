@@ -23,7 +23,7 @@ export default function Navbar() {
           <a
             href="#how-it-works"
             className="hidden md:block text-sm transition-colors"
-            style={{ color: "rgba(245,245,240,0.6)", fontFamily: "var(--font-dm-sans)" }}
+            style={{ color: "rgba(245,245,240,0.6)" }}
             onMouseOver={(e) => (e.currentTarget.style.color = "#F5F5F0")}
             onMouseOut={(e) => (e.currentTarget.style.color = "rgba(245,245,240,0.6)")}
           >
@@ -32,7 +32,7 @@ export default function Navbar() {
           <a
             href="#features"
             className="hidden md:block text-sm transition-colors"
-            style={{ color: "rgba(245,245,240,0.6)", fontFamily: "var(--font-dm-sans)" }}
+            style={{ color: "rgba(245,245,240,0.6)" }}
             onMouseOver={(e) => (e.currentTarget.style.color = "#F5F5F0")}
             onMouseOut={(e) => (e.currentTarget.style.color = "rgba(245,245,240,0.6)")}
           >
@@ -40,11 +40,10 @@ export default function Navbar() {
           </a>
           <button
             onClick={scrollToHero}
-            className="rounded-full px-5 py-2 text-sm font-semibold transition-opacity hover:opacity-90"
+            className="rounded-full px-5 py-2 text-sm transition-opacity hover:opacity-90"
             style={{
               background: "#1ED8B0",
               color: "#0A2535",
-              fontFamily: "var(--font-dm-sans)",
               fontWeight: 500,
             }}
           >

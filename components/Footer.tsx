@@ -8,16 +8,8 @@ export default function Footer() {
     >
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Logo */}
-        <span
-          style={{
-            fontFamily: "var(--font-syne)",
-            fontWeight: 800,
-            fontSize: "1.1rem",
-            color: "#1ED8B0",
-          }}
-        >
-          FINIO
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo-wordmark.svg" alt="FINIO" style={{ height: "28px", width: "auto" }} />
 
         {/* Links */}
         <div className="flex gap-6">
@@ -26,7 +18,7 @@ export default function Footer() {
               key={link}
               href="#"
               className="text-sm transition-colors"
-              style={{ color: "rgba(245,245,240,0.45)", fontFamily: "var(--font-dm-sans)" }}
+              style={{ color: "rgba(245,245,240,0.45)" }}
               onMouseOver={(e) => (e.currentTarget.style.color = "rgba(245,245,240,0.75)")}
               onMouseOut={(e) => (e.currentTarget.style.color = "rgba(245,245,240,0.45)")}
             >
@@ -36,10 +28,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p
-          className="text-sm"
-          style={{ color: "rgba(245,245,240,0.35)", fontFamily: "var(--font-dm-sans)" }}
-        >
+        <p className="text-sm" style={{ color: "rgba(245,245,240,0.35)" }}>
           © 2026 FINIO · Oslo, Norway
         </p>
       </div>
