@@ -178,7 +178,7 @@ export default function Hero() {
             <div className="p-5 flex flex-col gap-3 h-full">
               {/* Greeting */}
               <p className="text-xs mt-2" style={{ color: "rgba(245,245,240,0.7)" }}>
-                Good morning, Erik 👋
+                Good morning, Tor 👋
               </p>
 
               {/* Balance card */}
