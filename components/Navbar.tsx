@@ -15,17 +15,8 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <span
-          style={{
-            fontFamily: "var(--font-syne)",
-            fontWeight: 800,
-            fontSize: "1.25rem",
-            color: "#1ED8B0",
-            letterSpacing: "-0.02em",
-          }}
-        >
-          FINIO
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo-wordmark.svg" alt="FINIO" height={40} style={{ height: "40px", width: "auto" }} />
 
         {/* Nav links + CTA */}
         <div className="flex items-center gap-6">
