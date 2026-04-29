@@ -35,6 +35,18 @@ const items = [
     description:
       "See exactly how much FINIO has saved you since day one. Every kr counts.",
   },
+  {
+    emoji: "💳",
+    title: "Card benefit matching",
+    description:
+      "Tells you which of your cards earns the most on food, travel, and shopping — based on your actual spending.",
+  },
+  {
+    emoji: "🎯",
+    title: "Benefits you're missing",
+    description:
+      "FINIO cross-references your cards' perks against your habits and flags the rewards you're leaving on the table.",
+  },
 ];
 
 export default function WhatsInside() {
