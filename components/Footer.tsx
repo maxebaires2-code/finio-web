@@ -16,7 +16,7 @@ export default function Footer() {
           {["Privacy", "Terms", "Contact"].map((link) => (
             <a
               key={link}
-              href="#"
+              href="/privacy""
               className="text-sm transition-colors"
               style={{ color: "rgba(245,245,240,0.45)" }}
               onMouseOver={(e) => (e.currentTarget.style.color = "rgba(245,245,240,0.75)")}
