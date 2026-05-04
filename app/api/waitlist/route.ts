@@ -6,7 +6,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { email } = body;
+    const { email, name } = body;
 
     if (!email || typeof email !== "string" || !EMAIL_REGEX.test(email)) {
       return NextResponse.json(
@@ -33,6 +33,7 @@ export async function POST(req: NextRequest) {
     const { error } = await supabase.from("waitlist").insert([
       {
         email: email.toLowerCase().trim(),
+        name: name ? String(name).trim() : null,
         source: "landing_page",
         created_at: new Date().toISOString(),
       },

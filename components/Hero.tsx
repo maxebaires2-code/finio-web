@@ -3,7 +3,9 @@
 import { useState } from "react";
 
 export default function Hero() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [submittedName, setSubmittedName] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -16,11 +18,13 @@ export default function Hero() {
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ name: name.trim(), email }),
       });
       const data = await res.json();
       if (data.success) {
+        setSubmittedName(name.trim().split(" ")[0]); // keep first name for success msg
         setStatus("success");
+        setName("");
         setEmail("");
       } else {
         setStatus("error");
@@ -103,32 +107,47 @@ export default function Hero() {
             id="waitlist"
             style={{ scrollMarginTop: "80px" }}
           >
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-[480px]">
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                disabled={status === "loading" || status === "success"}
-                className="flex-1 px-4 outline-none rounded-xl text-sm"
-                style={{
-                  height: "52px",
-                  background: "rgba(245,245,240,0.06)",
-                  border: "1px solid rgba(245,245,240,0.15)",
-                  color: "#F5F5F0",
-                }}
-              />
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-[480px]">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your first name"
+                  disabled={status === "loading" || status === "success"}
+                  className="flex-1 px-4 outline-none rounded-xl text-sm"
+                  style={{
+                    height: "52px",
+                    background: "rgba(245,245,240,0.06)",
+                    border: "1px solid rgba(245,245,240,0.15)",
+                    color: "#F5F5F0",
+                  }}
+                />
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  disabled={status === "loading" || status === "success"}
+                  className="flex-1 px-4 outline-none rounded-xl text-sm"
+                  style={{
+                    height: "52px",
+                    background: "rgba(245,245,240,0.06)",
+                    border: "1px solid rgba(245,245,240,0.15)",
+                    color: "#F5F5F0",
+                  }}
+                />
+              </div>
               <button
                 type="submit"
                 disabled={status === "loading" || status === "success"}
-                className="px-6 rounded-xl text-sm whitespace-nowrap transition-opacity hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
+                className="w-full rounded-xl text-sm whitespace-nowrap transition-opacity hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
                 style={{
                   height: "52px",
                   background: "#10C4A0",
                   color: "#0A2535",
                   fontWeight: 600,
-                  minWidth: "180px",
                 }}
               >
                 {status === "loading" ? (
@@ -148,7 +167,9 @@ export default function Hero() {
             {/* Status messages */}
             {status === "success" && (
               <p className="text-sm mt-3" style={{ color: "#10C4A0" }}>
-                You&apos;re on the list! We&apos;ll be in touch.
+                {submittedName
+                  ? `You're on the list, ${submittedName}! We'll be in touch soon.`
+                  : "You're on the list! We'll be in touch."}
               </p>
             )}
             {status === "error" && (
